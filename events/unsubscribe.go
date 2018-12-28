@@ -4,18 +4,18 @@ import "fmt"
 
 type ListUnsubscribe struct {
 	EventCommon
-	CampaignID      string      `json:"campaign_id"`
-	CustomerID      string      `json:"customer_id"`
-	MessageFrom     string      `json:"mailfrom"`
-	MessageID       string      `json:"message_id"`
-	Metadata        interface{} `json:"rcpt_meta"`
-	Tags            []string    `json:"rcpt_tags"`
-	Recipient       string      `json:"rcpt_to"`
-	RecipientType   string      `json:"rcpt_type"`
-	TemplateID      string      `json:"template_id"`
-	TemplateVersion string      `json:"template_version"`
-	Timestamp       Timestamp   `json:"timestamp"`
-	TransmissionID  string      `json:"transmission_id"`
+	CampaignID      string            `json:"campaign_id"`
+	CustomerID      string            `json:"customer_id"`
+	MessageFrom     string            `json:"mailfrom"`
+	MessageID       string            `json:"message_id"`
+	Metadata        map[string]string `json:"rcpt_meta"`
+	Tags            []string          `json:"rcpt_tags"`
+	Recipient       string            `json:"rcpt_to"`
+	RecipientType   string            `json:"rcpt_type"`
+	TemplateID      string            `json:"template_id"`
+	TemplateVersion string            `json:"template_version"`
+	Timestamp       Timestamp         `json:"timestamp"`
+	TransmissionID  string            `json:"transmission_id"`
 }
 
 // String returns a brief summary of a ListUnsubscribe event

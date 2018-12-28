@@ -273,19 +273,19 @@ func (v *LatLong) UnmarshalJSON(data []byte) error {
 
 type Creation struct {
 	EventCommon
-	Accepted        string      `json:"accepted_rcpts"`
-	CampaignID      string      `json:"campaign_id"`
-	CustomerID      string      `json:"customer_id"`
-	InjectionMethod string      `json:"inj_method"`
-	NodeName        string      `json:"node_name"`
-	Metadata        interface{} `json:"rcpt_meta"`
-	Tags            []string    `json:"rcpt_tags"`
-	Submitted       string      `json:"submitted_rcpts"`
-	TemplateID      string      `json:"template_id"`
-	TemplateVersion string      `json:"template_version"`
-	Timestamp       Timestamp   `json:"timestamp"`
-	TransmissionID  string      `json:"transmission_id"`
-	UserID          string      `json:"user_id"`
+	Accepted        string            `json:"accepted_rcpts"`
+	CampaignID      string            `json:"campaign_id"`
+	CustomerID      string            `json:"customer_id"`
+	InjectionMethod string            `json:"inj_method"`
+	NodeName        string            `json:"node_name"`
+	Metadata        map[string]string `json:"rcpt_meta"`
+	Tags            []string          `json:"rcpt_tags"`
+	Submitted       string            `json:"submitted_rcpts"`
+	TemplateID      string            `json:"template_id"`
+	TemplateVersion string            `json:"template_version"`
+	Timestamp       Timestamp         `json:"timestamp"`
+	TransmissionID  string            `json:"transmission_id"`
+	UserID          string            `json:"user_id"`
 }
 
 func (c *Creation) String() string {

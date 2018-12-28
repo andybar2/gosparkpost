@@ -4,28 +4,28 @@ import "fmt"
 
 type Delivery struct {
 	EventCommon
-	Binding         string      `json:"binding"`
-	BindingGroup    string      `json:"binding_group"`
-	CampaignID      string      `json:"campaign_id"`
-	CustomerID      string      `json:"customer_id"`
-	DeliveryMethod  string      `json:"delv_method"`
-	DeviceToken     string      `json:"device_token"`
-	IPAddress       string      `json:"ip_address"`
-	MessageID       string      `json:"message_id"`
-	MessageFrom     string      `json:"msg_from"`
-	MessageSize     string      `json:"msg_size"`
-	Retries         string      `json:"num_retries"`
-	QueueTime       string      `json:"queue_time"`
-	Metadata        interface{} `json:"rcpt_meta"`
-	Tags            []string    `json:"rcpt_tags"`
-	Recipient       string      `json:"rcpt_to"`
-	RecipientType   string      `json:"rcpt_type"`
-	ReceiveProtocol string      `json:"recv_method"`
-	RoutingDomain   string      `json:"routing_domain"`
-	TemplateID      string      `json:"template_id"`
-	TemplateVersion string      `json:"template_version"`
-	Timestamp       Timestamp   `json:"timestamp"`
-	TransmissionID  string      `json:"transmission_id"`
+	Binding         string            `json:"binding"`
+	BindingGroup    string            `json:"binding_group"`
+	CampaignID      string            `json:"campaign_id"`
+	CustomerID      string            `json:"customer_id"`
+	DeliveryMethod  string            `json:"delv_method"`
+	DeviceToken     string            `json:"device_token"`
+	IPAddress       string            `json:"ip_address"`
+	MessageID       string            `json:"message_id"`
+	MessageFrom     string            `json:"msg_from"`
+	MessageSize     string            `json:"msg_size"`
+	Retries         string            `json:"num_retries"`
+	QueueTime       string            `json:"queue_time"`
+	Metadata        map[string]string `json:"rcpt_meta"`
+	Tags            []string          `json:"rcpt_tags"`
+	Recipient       string            `json:"rcpt_to"`
+	RecipientType   string            `json:"rcpt_type"`
+	ReceiveProtocol string            `json:"recv_method"`
+	RoutingDomain   string            `json:"routing_domain"`
+	TemplateID      string            `json:"template_id"`
+	TemplateVersion string            `json:"template_version"`
+	Timestamp       Timestamp         `json:"timestamp"`
+	TransmissionID  string            `json:"transmission_id"`
 }
 
 // String returns a brief summary of a Delivery event
@@ -44,26 +44,26 @@ func (d *Delivery) ECLog() string {
 
 type Injection struct {
 	EventCommon
-	Binding         string      `json:"binding"`
-	BindingGroup    string      `json:"binding_group"`
-	CampaignID      string      `json:"campaign_id"`
-	CustomerID      string      `json:"customer_id"`
-	MessageID       string      `json:"message_id"`
-	MessageFrom     string      `json:"msg_from"`
-	MessageSize     string      `json:"msg_size"`
-	Metadata        interface{} `json:"rcpt_meta"`
-	Pathway         string      `json:"pathway"`
-	PathwayGroup    string      `json:"pathway_group"`
-	Tags            []string    `json:"rcpt_tags"`
-	Recipient       string      `json:"rcpt_to"`
-	RecipientType   string      `json:"rcpt_type"`
-	ReceiveProtocol string      `json:"recv_method"`
-	RoutingDomain   string      `json:"routing_domain"`
-	Subject         string      `json:"subject"`
-	TemplateID      string      `json:"template_id"`
-	TemplateVersion string      `json:"template_version"`
-	Timestamp       Timestamp   `json:"timestamp"`
-	TransmissionID  string      `json:"transmission_id"`
+	Binding         string            `json:"binding"`
+	BindingGroup    string            `json:"binding_group"`
+	CampaignID      string            `json:"campaign_id"`
+	CustomerID      string            `json:"customer_id"`
+	MessageID       string            `json:"message_id"`
+	MessageFrom     string            `json:"msg_from"`
+	MessageSize     string            `json:"msg_size"`
+	Metadata        map[string]string `json:"rcpt_meta"`
+	Pathway         string            `json:"pathway"`
+	PathwayGroup    string            `json:"pathway_group"`
+	Tags            []string          `json:"rcpt_tags"`
+	Recipient       string            `json:"rcpt_to"`
+	RecipientType   string            `json:"rcpt_type"`
+	ReceiveProtocol string            `json:"recv_method"`
+	RoutingDomain   string            `json:"routing_domain"`
+	Subject         string            `json:"subject"`
+	TemplateID      string            `json:"template_id"`
+	TemplateVersion string            `json:"template_version"`
+	Timestamp       Timestamp         `json:"timestamp"`
+	TransmissionID  string            `json:"transmission_id"`
 }
 
 // String returns a brief summary of a GenerationFailure event
@@ -166,26 +166,26 @@ func (b *OutOfBand) ECLog() string {
 
 type SpamComplaint struct {
 	EventCommon
-	Binding         string      `json:"binding"`
-	BindingGroup    string      `json:"binding_group"`
-	CampaignID      string      `json:"campaign_id"`
-	CustomerID      string      `json:"customer_id"`
-	DeliveryMethod  string      `json:"delv_method"`
-	FeedbackType    string      `json:"fbtype"`
-	FriendlyFrom    string      `json:"friendly_from"`
-	MessageID       string      `json:"message_id"`
-	Metadata        interface{} `json:"rcpt_meta"`
-	Tags            []string    `json:"rcpt_tags"`
-	Recipient       string      `json:"rcpt_to"`
-	RecipientType   string      `json:"rcpt_type"`
-	ReportedBy      string      `json:"report_by"`
-	ReportedTo      string      `json:"report_to"`
-	Subject         string      `json:"subject"`
-	TemplateID      string      `json:"template_id"`
-	TemplateVersion string      `json:"template_version"`
-	Timestamp       Timestamp   `json:"timestamp"`
-	TransmissionID  string      `json:"transmission_id"`
-	UserString      string      `json:"user_str"`
+	Binding         string            `json:"binding"`
+	BindingGroup    string            `json:"binding_group"`
+	CampaignID      string            `json:"campaign_id"`
+	CustomerID      string            `json:"customer_id"`
+	DeliveryMethod  string            `json:"delv_method"`
+	FeedbackType    string            `json:"fbtype"`
+	FriendlyFrom    string            `json:"friendly_from"`
+	MessageID       string            `json:"message_id"`
+	Metadata        map[string]string `json:"rcpt_meta"`
+	Tags            []string          `json:"rcpt_tags"`
+	Recipient       string            `json:"rcpt_to"`
+	RecipientType   string            `json:"rcpt_type"`
+	ReportedBy      string            `json:"report_by"`
+	ReportedTo      string            `json:"report_to"`
+	Subject         string            `json:"subject"`
+	TemplateID      string            `json:"template_id"`
+	TemplateVersion string            `json:"template_version"`
+	Timestamp       Timestamp         `json:"timestamp"`
+	TransmissionID  string            `json:"transmission_id"`
+	UserString      string            `json:"user_str"`
 }
 
 // String returns a brief summary of a SpamComplaint event
@@ -196,24 +196,24 @@ func (p *SpamComplaint) String() string {
 
 type PolicyRejection struct {
 	EventCommon
-	CampaignID      string      `json:"campaign_id"`
-	CustomerID      string      `json:"customer_id"`
-	ErrorCode       string      `json:"error_code"`
-	MessageID       string      `json:"message_id"`
-	MessageFrom     string      `json:"msg_from"`
-	Metadata        interface{} `json:"rcpt_meta"`
-	Pathway         string      `json:"pathway"`
-	PathwayGroup    string      `json:"pathway_group"`
-	Tags            []string    `json:"rcpt_tags"`
-	RawReason       string      `json:"raw_reason"`
-	Reason          string      `json:"reason"`
-	Recipient       string      `json:"rcpt_to"`
-	RecipientType   string      `json:"rcpt_type"`
-	ReceiveProtocol string      `json:"recv_method"`
-	TemplateID      string      `json:"template_id"`
-	TemplateVersion string      `json:"template_version"`
-	Timestamp       Timestamp   `json:"timestamp"`
-	TransmissionID  string      `json:"transmission_id"`
+	CampaignID      string            `json:"campaign_id"`
+	CustomerID      string            `json:"customer_id"`
+	ErrorCode       string            `json:"error_code"`
+	MessageID       string            `json:"message_id"`
+	MessageFrom     string            `json:"msg_from"`
+	Metadata        map[string]string `json:"rcpt_meta"`
+	Pathway         string            `json:"pathway"`
+	PathwayGroup    string            `json:"pathway_group"`
+	Tags            []string          `json:"rcpt_tags"`
+	RawReason       string            `json:"raw_reason"`
+	Reason          string            `json:"reason"`
+	Recipient       string            `json:"rcpt_to"`
+	RecipientType   string            `json:"rcpt_type"`
+	ReceiveProtocol string            `json:"recv_method"`
+	TemplateID      string            `json:"template_id"`
+	TemplateVersion string            `json:"template_version"`
+	Timestamp       Timestamp         `json:"timestamp"`
+	TransmissionID  string            `json:"transmission_id"`
 }
 
 // String returns a brief summary of a PolicyRejection event
@@ -225,32 +225,32 @@ func (p *PolicyRejection) String() string {
 
 type Delay struct {
 	EventCommon
-	Binding         string      `json:"binding"`
-	BindingGroup    string      `json:"binding_group"`
-	BounceClass     string      `json:"bounce_class"`
-	CampaignID      string      `json:"campaign_id"`
-	CustomerID      string      `json:"customer_id"`
-	DeliveryMethod  string      `json:"delv_method"`
-	DeviceToken     string      `json:"device_token"`
-	ErrorCode       string      `json:"error_code"`
-	IPAddress       string      `json:"ip_address"`
-	MessageID       string      `json:"message_id"`
-	MessageFrom     string      `json:"msg_from"`
-	MessageSize     string      `json:"msg_size"`
-	Retries         string      `json:"num_retries"`
-	QueueTime       string      `json:"queue_time"`
-	Metadata        interface{} `json:"rcpt_meta"`
-	Tags            []string    `json:"rcpt_tags"`
-	Recipient       string      `json:"rcpt_to"`
-	RecipientType   string      `json:"rcpt_type"`
-	RawReason       string      `json:"raw_reason"`
-	Reason          string      `json:"reason"`
-	RoutingDomain   string      `json:"routing_domain"`
-	Subject         string      `json:"subject"`
-	TemplateID      string      `json:"template_id"`
-	TemplateVersion string      `json:"template_version"`
-	Timestamp       Timestamp   `json:"timestamp"`
-	TransmissionID  string      `json:"transmission_id"`
+	Binding         string            `json:"binding"`
+	BindingGroup    string            `json:"binding_group"`
+	BounceClass     string            `json:"bounce_class"`
+	CampaignID      string            `json:"campaign_id"`
+	CustomerID      string            `json:"customer_id"`
+	DeliveryMethod  string            `json:"delv_method"`
+	DeviceToken     string            `json:"device_token"`
+	ErrorCode       string            `json:"error_code"`
+	IPAddress       string            `json:"ip_address"`
+	MessageID       string            `json:"message_id"`
+	MessageFrom     string            `json:"msg_from"`
+	MessageSize     string            `json:"msg_size"`
+	Retries         string            `json:"num_retries"`
+	QueueTime       string            `json:"queue_time"`
+	Metadata        map[string]string `json:"rcpt_meta"`
+	Tags            []string          `json:"rcpt_tags"`
+	Recipient       string            `json:"rcpt_to"`
+	RecipientType   string            `json:"rcpt_type"`
+	RawReason       string            `json:"raw_reason"`
+	Reason          string            `json:"reason"`
+	RoutingDomain   string            `json:"routing_domain"`
+	Subject         string            `json:"subject"`
+	TemplateID      string            `json:"template_id"`
+	TemplateVersion string            `json:"template_version"`
+	Timestamp       Timestamp         `json:"timestamp"`
+	TransmissionID  string            `json:"transmission_id"`
 }
 
 // String returns a brief summary of a Delay event
